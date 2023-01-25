@@ -1,0 +1,23 @@
+.container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--cinzaEs);
+}
+.imgLogo img {
+    max-width: 150px;
+
+}
+.container a{
+    margin-right: 15px;
+    font-size: 3rem;
+    color: black;
+    
+}
+.container  a:hover{
+    background-color: green;
+    border-radius: 25px;
+    padding: 3px;
+    color: var(--branco);}

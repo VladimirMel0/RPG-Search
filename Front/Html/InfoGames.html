@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/06d226fe7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Front/Styles/Main.css">
+    <link rel="stylesheet" href="/Front/Styles/infoGames.css">
+    <title>Informações sobre o jogo</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/Front/Html/Main.html">
+                <img src="/Front/Assets/D20.png">
+                <h1>RPG - Search</h1>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/Front/Html/Main.html">Home</a></li>
+                <li><a href="/Front/Html/encontrarJogo.html">Encontrar Jogo</a></li>
+            </ul>
+        </nav>
+        <div class="btnLogin">
+            <a href="./cadastrarJogo.html"> <i class="fa-solid fa-user">Cadastre Seu Jogo</i> </a>
+        </div>
+    </header>
+    <main>
+        <h1 class="H1main">Encontre Grupos de RPG</h1>
+        <div class="containerGeral">
+            <div class="containerInfos">
+                <div class="contactInfo">
+                    <i class="fa-solid fa-circle-info">Informacoes de Contato</i>
+                    <h3>Nome: <span>Vladimir Melo</span></h3>
+                    <h3>Email: <span>Vladimir@gmail.com</span></h3>
+                    
+                </div>
+                <div class="description">
+                    <i class="fa-solid fa-comment-quote">Descricao</i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</p>
+                </div>
+
+                <div class="location">
+                    <i class="fa-sharp fa-solid fa-location-dot">Localizacao</i>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62091752.159660816!2d-85.5426739316034!3d-18.2200402994567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1674324927590!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                </div>
+
+
+
+            </div>
+            <div class="cadastro">
+                <div class="card">
+                    <i class="fa-solid fa-id-card"> Contato</i>
+                    <div class="placeFloat">
+                        <label id="labelNome">Nome</label>
+                        <input id="Nome" type="text" name="nome" placeholder="Nome" required>
+
+                    </div>
+                    <div class="placeFloat">
+                        <label id="labelEmail">Email</label>
+                        <input id="Email" type="email" name="email" placeholder="Email" required>
+
+                    </div>
+                    <div class="placeFloat">
+                        <label id="labelMessage">Sua Mensagem</label><br>
+                        <textarea id="msg" placeholder="Coloque a Descrição do Jogo"></textarea>
+
+                    </div>
+
+                    <button type="submit">Enviar</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
