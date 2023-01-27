@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rpgsearch.RPGsearch.Model.Cadastro;
+import com.rpgsearch.RPGsearch.Model.Game;
 import com.rpgsearch.RPGsearch.Services.GameService;
 
 import jakarta.validation.Valid;
@@ -22,21 +22,19 @@ public class ControllerRPG {
 
     private GameService gameService;
 
-    public ControllerRPG(GameService gameService){
-    this.gameService = gameService;
+    public ControllerRPG(GameService gameService) {
+        this.gameService = gameService;
+    }
+
+    @GetMapping("/id")
+    public ResponseEntity<List<Game>> listaGames() {
+        return ResponseEntity.status(200).body(gameService.listaGames());
+
+    }
+
+    @PostMapping()
+    public ResponseEntity<Object> criarGame(@Valid @RequestBody Game game) {
+        return ResponseEntity.status(200).body(gameService.criarGame(game));
+    }
+
 }
-
-@GetMapping()
-public ResponseEntity<List<Cadastro>> listaGames(){
-    return ResponseEntity.status(200).body(gameService.listaGames());
-
-}
-
-@PostMapping()
-public ResponseEntity<Object> cadastrar(@Valid @RequestBody Cadastro cadastro){
-    return ResponseEntity.status(200).body(gameService.criarGame(cadastro));
-}
-
-
-}
-

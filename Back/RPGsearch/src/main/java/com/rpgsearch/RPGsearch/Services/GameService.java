@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.rpgsearch.RPGsearch.Model.Cadastro;
+import com.rpgsearch.RPGsearch.Model.Game;
 import com.rpgsearch.RPGsearch.Repository.IGames;
 
 @Service
@@ -16,14 +16,14 @@ public class GameService {
         this.repository = repository;
     }
 
-    public List<Cadastro> listaGames(){
-        List<Cadastro> lista = repository.findAll();
+    public List<Game> listaGames(){
+        List<Game> lista = repository.findAll();
         return lista;
     }
 
-    public Cadastro criarGame(Cadastro gameCadastro){
-        Cadastro usuarioNovo = repository.save(gameCadastro);
-        return usuarioNovo;
+    public Game criarGame(Game gameCadastro){
+        Game criarGame = repository.save(gameCadastro);
+        return criarGame;
     }
 
   

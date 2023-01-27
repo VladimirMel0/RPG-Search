@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="cadastro")
-public class Cadastro {
+public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +40,7 @@ public class Cadastro {
     @Column(name = "cep, length = 8, nullable = false")
     private String cep;
 
-    @NotBlank
+   // @NotBlank
     @Column(name = "jogo, nullable = false")
     private EnumJogo jogo;
 
