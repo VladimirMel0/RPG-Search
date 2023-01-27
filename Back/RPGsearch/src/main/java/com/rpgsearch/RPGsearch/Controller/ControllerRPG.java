@@ -26,7 +26,7 @@ public class ControllerRPG {
         this.gameService = gameService;
     }
 
-    @GetMapping("/id")
+    @GetMapping()
     public ResponseEntity<List<Game>> listaGames() {
         return ResponseEntity.status(200).body(gameService.listaGames());
 

@@ -29,7 +29,7 @@
     <main>
         <h1 class="H1main">Cadastre Seu Jogo</h1>
         <div class="cadastro">
-            <div class="card">
+            <div id="Form" class="card">
                 <div id='msgError'></div>
                 <div id='msgSuccess'></div>
                 <div class="placeFloat">
@@ -45,9 +45,9 @@
                     <input id="CEP" type="text" name="CEP" placeholder="CEP" required>
                 </div>
                 <div class="placeFloat">
-                    <label for="cars">Escolha o Jogo:</label>
+                    <label for="games">Escolha o Jogo:</label>
                     <br>
-                    <select id="cars" name="cars" required>
+                    <select id="games" name="games" required>
                         <option value="RPGonline">RPG Online</option>
                         <option value="tabuleiroRPG">Tabuleiro RPG</option>
                         <option value="cartasFantasia">Cartas de Fantasia</option>
@@ -55,8 +55,8 @@
                     </select>
                 </div>
                 <div class="placeFloat">
-                    <label for="msg">Descrição:</label>
-                    <br>
+                    <label id= "labelMsg" for="msg">Descrição:</label>
+                    <br> 
                     <textarea id="msg" placeholder="Coloque a Descrição do Jogo"></textarea>
                 </div>
                 <button onclick='cadastrar()' type="submit">Cadastrar</button>
@@ -64,6 +64,7 @@
         </div>
 
     </main>
+    <script src="../JS/cadastrar.js"></script>
 
 </body>
 
