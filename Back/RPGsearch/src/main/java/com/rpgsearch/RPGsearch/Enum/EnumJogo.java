@@ -5,7 +5,4 @@ public enum EnumJogo {
         Tabuleiro_RPG,
         Cartas_de_Fantasia,
         Live_Action_Roleplay,
-
-    
-    
 }

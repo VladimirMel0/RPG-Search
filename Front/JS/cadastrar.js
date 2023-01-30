@@ -1,8 +1,8 @@
 const formulario = document.querySelector('#Form');
 
-let nome = document.querySelector('#Nome');
-let labelNome = document.querySelector('#labelNome');
-let validNome = false;
+let name = document.querySelector('#Nome');
+let labelName = document.querySelector('#labelNome');
+let validName = false;
 
 let email = document.querySelector('#Email');
 let labelEmail = document.querySelector('#labelEmail');
@@ -13,24 +13,24 @@ let labelCEP = document.querySelector('#labelCEP');
 let validCep = false;
 
 
-let games = document.querySelector('#Games');
+let jogo = document.querySelector('#Games');
 
-let msg = document.querySelector('#Msg');
-let labelMsg = document.querySelector('#labelMsg');
-let validMsg = false;
+let description = document.querySelector('#Msg');
+let labelDescription = document.querySelector('#labelMsg');
+let validDescription = false;
 
-nome.addEventListener('keyup', () => {
-    if (nome.value.length <= 2) {
-        labelNome.setAttribute('style', 'color:red')
-        labelNome.innerHTML = 'Nome'
-        nome.setAttribute('style', 'border-color: red')
-        validNome = false
+name.addEventListener('keyup', () => {
+    if (name.value.length <= 2) {
+        labelName.setAttribute('style', 'color:red')
+        labelName.innerHTML = 'Nome'
+        name.setAttribute('style', 'border-color: red')
+        validName = false
     }
     else {
-        labelNome.setAttribute('style', 'color:green')
-        labelNome.innerHTML = 'Nome'
-        nome.setAttribute('style', 'border-color: green')
-        validNome = true
+        labelName.setAttribute('style', 'color:green')
+        labelName.innerHTML = 'Nome'
+        name.setAttribute('style', 'border-color: green')
+        validName = true
     }
 })
 
@@ -64,18 +64,18 @@ cep.addEventListener('keyup', () => {
     }
 })
 
-msg.addEventListener('keyup', () => {
-    if (msg.value.length <= 9) {
-        labelMsg.setAttribute('style', 'color:red')
-        labelMsg.innerHTML = 'Descrição:'
-        msg.setAttribute('style', 'border-color: red')
-        validMsg = false
+description.addEventListener('keyup', () => {
+    if (description.value.length <= 9) {
+        labelDescription.setAttribute('style', 'color:red')
+        labelDescription.innerHTML = 'Descrição:'
+        description.setAttribute('style', 'border-color: red')
+        validDescription = false
     }
     else {
-        labelMsg.setAttribute('style', 'color:green')
-        labelMsg.innerHTML = 'Descrição:'
-        msg.setAttribute('style', 'border-color: green')
-        validMsg = true
+        labelDescription.setAttribute('style', 'color:green')
+        labelDescription.innerHTML = 'Descrição:'
+        description.setAttribute('style', 'border-color: green')
+        validDescription = true
     }
 })
 
@@ -83,7 +83,7 @@ msg.addEventListener('keyup', () => {
 
 
 function cadastrar() {
-    if (validNome && validEmail && validCep && validMsg) {
+    if (validName && validEmail && validCep && validDescription) {
 
         fetch("http://localhost:8070/cadastro",
             {
@@ -93,11 +93,11 @@ function cadastrar() {
                 },
                 method: "POST",
                 body: JSON.stringify({
-                    nome: nome.value,
+                    name: name.value,
                     email: email.value,
                     cep: cep.value,
-                    games: games.value,
-                    msg: msg.value,
+                    jogo: jogo.value,
+                    description: description.value,
 
                 })
             });
@@ -105,11 +105,11 @@ function cadastrar() {
 };
 
 function limpar() {
-    nome.value = "";
+    name.value ="";
     email.value = "";
     cep.value = "";
-    games.value = "";
-    msg.value = "";
+    jogo.value = "";
+    description.value = "";
 
 };
 
