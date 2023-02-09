@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/cadastro")
+@RequestMapping("")
 public class ControllerRPG {
 
     private GameService gameService;
@@ -26,13 +26,13 @@ public class ControllerRPG {
         this.gameService = gameService;
     }
 
-    @GetMapping()
+    @GetMapping("/lista")
     public ResponseEntity<List<Game>> listaGames() {
         return ResponseEntity.status(200).body(gameService.listaGames());
 
     }
 
-    @PostMapping()
+    @PostMapping("/cadastro")
     public ResponseEntity<Object> criarGame(@Valid @RequestBody Game game) {
         return ResponseEntity.status(200).body(gameService.criarGame(game));
     }
