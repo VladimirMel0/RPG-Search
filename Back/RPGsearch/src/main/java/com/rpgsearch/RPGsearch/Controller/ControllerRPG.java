@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,13 @@ public class ControllerRPG {
     public ResponseEntity<List<Game>> listaGames() {
         return ResponseEntity.status(200).body(gameService.listaGames());
 
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Game> findById(@PathVariable int id) {
+
+    Game obj = gameService.findById(id);   
+     return ResponseEntity.ok().body(obj);
     }
 
     @PostMapping("/cadastro")

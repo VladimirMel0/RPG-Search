@@ -13,8 +13,7 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
-    margin-bottom: 5%;
-   
+    margin-bottom: 5%;  
 }
 .JogoSingle img {
     max-width: 150px;

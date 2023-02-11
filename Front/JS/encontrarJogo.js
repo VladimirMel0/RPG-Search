@@ -21,7 +21,7 @@ async function getAllJogos(){
 
                 </tr>
             </table>
-            <a href="./InfoGames.html">Contato</a>
+            <a href="./InfoGames/${lista.id}.html">Contato</a>
             <br>
             </div>
       `
