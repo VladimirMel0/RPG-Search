@@ -31,60 +31,55 @@
         </div>
     </header>
     <main>
-        <h1 class="H1main">Encontre Grupos de RPG</h1>
-        <div class="containerGeral">
-            <div class="containerInfos">
-                <div class="contactInfo">
-                    <i class="fa-solid fa-circle-info">Informacoes de Contato</i>
-                    <h3>Nome: <span>Vladimir Melo</span></h3>
-                    <h3>Email: <span>Vladimir@gmail.com</span></h3>
-                    
-                </div>
-                <div class="description">
-                    <i class="fa-solid fa-comment-quote">Descricao</i>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-                </div>
-
-                <div class="location">
-                    <i class="fa-sharp fa-solid fa-location-dot">Localizacao</i>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62091752.159660816!2d-85.5426739316034!3d-18.2200402994567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1674324927590!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
-                </div>
-
-
-
-            </div>
-            <div class="cadastro">
-                <div class="card">
-                    <i class="fa-solid fa-id-card"> Contato</i>
-                    <div class="placeFloat">
-                        <label id="labelNome">Nome</label>
-                        <input id="Nome" type="text" name="nome" placeholder="Nome" required>
+        <div>
+            <h1 class="H1main">Encontre Grupos de RPG</h1>
+            <div class="containerGeral">
+                <div class="containerInfos">
+                    <div class="contactInfo">
+                        <i class="fa-solid fa-circle-info">Informacoes de Contato</i>
+                        <h3>Nome: <span id="nome"></span></h3>
+                        <h3>Email: <span id="email"></span></h3>
 
                     </div>
-                    <div class="placeFloat">
-                        <label id="labelEmail">Email</label>
-                        <input id="Email" type="email" name="email" placeholder="Email" required>
-
+                    <div class="description">
+                        <i class="fa-solid fa-comment-quote">Descricao</i>
+                        <p id="description"></p>
                     </div>
-                    <div class="placeFloat">
-                        <label id="labelMessage">Sua Mensagem</label><br>
-                        <textarea id="msg" placeholder="Coloque a Descrição do Jogo"></textarea>
+
+                    <div class="location">
+                        <i class="fa-sharp fa-solid fa-location-dot">Localizacao</i>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62091752.159660816!2d-85.5426739316034!3d-18.2200402994567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1674324927590!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+
+
+                </div>
+                <div class="cadastro">
+                    <div class="card">
+                        <i class="fa-solid fa-id-card"> Contato</i>
+                        <div class="placeFloat">
+                            <label id="labelNome">Nome</label>
+                            <input id="Nome" type="text" name="nome" placeholder="Nome" required>
+
+                        </div>
+                        <div class="placeFloat">
+                            <label id="labelEmail">Email</label>
+                            <input id="Email" type="email" name="email" placeholder="Email" required>
+
+                        </div>
+                        <div class="placeFloat">
+                            <label id="labelMessage">Sua Mensagem</label><br>
+                            <textarea id="msg" placeholder="Coloque a Descrição do Jogo"></textarea>
+
+                        </div>
+
+                        <button type="submit">Enviar</button>
 
                     </div>
 
-                    <button type="submit">Enviar</button>
+
 
                 </div>
-
-
-
             </div>
         </div>
 
@@ -92,5 +87,7 @@
 
 
 </body>
+<script src="../JS/infoGames.js"></script>
+
 
 </html>
