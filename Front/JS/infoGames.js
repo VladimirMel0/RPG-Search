@@ -18,3 +18,48 @@ fetch(`http://localhost:8070/${jogoId}`)
   .catch(error => {
     console.error('Erro ao buscar informações do produto:', error);
   });
+
+
+  const formulario = document.querySelector('#Form');
+
+  let ownerRef = document.querySelector('#Nome');
+  let emailFrom = document.querySelector('#email');
+  let emailTo = document.querySelector('#emailFrom');
+  let subject = document.querySelector('#H1main')
+  let text = document.querySelector('#msg')
+
+  function Msemail() {
+        fetch("http://localhost:8090/ms-email",
+            {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                method: "POST",
+                body: JSON.stringify({
+                  
+                    ownerRef: ownerRef.value,
+                    emailFrom: emailFrom.value,
+                    emailTo: emailTo.value,
+                    subject: subject.value,
+                    text: msg.value
+                  
+
+                })
+            });
+    };
+
+function limpar() {
+  ownerRef.value ="";
+  emailFrom.value = "";
+  emailTo.value = "";
+  subject.value = "";
+  text.value = "";
+
+};
+
+formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
+    cadastrar();
+    limpar();
+});
